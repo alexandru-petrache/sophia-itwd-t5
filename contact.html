@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twin Cities Animal Rescue | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Interested in volunteering, fostering, or adopting? Send us your information below.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section aria-labelledby="area-heading">
+            <h2 id="area-heading">Service Area and Hours</h2>
+            <p>We serve the greater Twin Cities metro area, including Minneapolis, St. Paul, and the surrounding suburbs.</p>
+            <p>Office hours are Monday through Friday, 9 a.m. to 5 p.m., and Saturday, 10 a.m. to 2 p.m.</p>
+        </section>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Volunteer and Foster Interest Form</h2>
+
+            <div id="saved-interest-banner" class="interest-banner" hidden></div>
+
+            <form action="#" method="post" id="contact-form" novalidate>
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required minlength="2" placeholder="Jane Doe" aria-describedby="full-name-error">
+                    <span class="error-message" id="full-name-error"></span>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com" aria-describedby="email-error">
+                    <span class="error-message" id="email-error"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interest Details</legend>
+
+                    <label for="interest-type">Interest Type</label>
+                    <select id="interest-type" name="interest-type" required aria-describedby="interest-type-error">
+                        <option value="">Select one</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="foster">Foster</option>
+                        <option value="adoption">Adoption Information</option>
+                    </select>
+                    <span class="error-message" id="interest-type-error"></span>
+
+                    <label for="availability">Availability</label>
+                    <input type="text" id="availability" name="availability" required placeholder="e.g., Weekday evenings, weekends">
+
+                    <label for="experience">Experience With Pets</label>
+                    <textarea id="experience" name="experience" rows="3" required placeholder="Tell us about any experience you have caring for animals"></textarea>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Anything else we should know"></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Interest Form</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Twin Cities Animal Rescue. All rights reserved.</p>
+        <p>123 Rescue Lane, Twin Cities, MN</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
